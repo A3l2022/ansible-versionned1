@@ -1,0 +1,24 @@
+---
+
+hosts: [Alldv]
+
+
+tasks:
+- name: "install required software"
+  yum: 
+    name: "{{packages}}"
+    state: present
+    vars:
+      packages:
+      - git
+      - docker
+      - docker-compose
+      - python3-pip
+    become: yes
+
+- name: "start docker"
+  service: 
+    name: docker
+    state: started
+    enabled: yes
+  become: true
