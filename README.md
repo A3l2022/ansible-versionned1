@@ -1,2 +1,1 @@
-# ansible-versionned1
-allow usage of vcs by ansible users
+Versionned ansible to allow ansible users to better collaborate without conflicts.
